@@ -1,0 +1,94 @@
+
+header{
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(1, 82, 82);
+  color: white;
+}
+.links{
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  
+}
+.list-item{
+  font-size: larger;
+  font-weight: 500;
+  padding-right: 20px;
+  margin: auto;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+
+.home-component-headings{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(245, 247, 247);
+  padding: 30px;
+}
+
+ .products-section h2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+ .products{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 50px;
+}
+ .products .products-items{
+  background-color: rgb(245, 247, 247);
+  width: 70%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  padding: 0 10px 10px 10px;
+}
+ .products .products-items h3{
+  background-color: rgb(1, 82, 82);
+  color: white;
+  margin-top: 0;
+  padding: 10px;
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+}
+ .products .products-items img{
+  width: 80%;
+}
+ .products .products-items button{
+  border: none;
+  border-radius: 20px;
+  background-color: rgb(3, 144, 144);
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.home-component .products-section .all-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.home-component .products-section .all-btn .link{
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 200px;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
