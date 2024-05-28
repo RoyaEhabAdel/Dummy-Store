@@ -3,7 +3,7 @@ import '../App.css'
 import Navbar from './Navbar';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import Products from './Products';
+
 
 const Home = () => {
 
@@ -12,7 +12,7 @@ const Home = () => {
     useEffect(() =>{
     const fetchProducts = async ()=>{
         try {
-            const res = await fetch('https://dummyjson.com/products?_limit=3');
+            const res = await fetch('https://dummyjson.com/products');
             const data = await res.json();
             console.log(data)
             setProducts(data.products)
@@ -24,7 +24,7 @@ const Home = () => {
     fetchProducts()
     }, []);
     
-    console.log(products)
+
   return (
     <div>
         <div>
@@ -49,7 +49,7 @@ const Home = () => {
                             <h3>{product.title}</h3>
                             <img alt='' src={product.images} />
                             <p>{product.description}</p>
-                            <button>Read more...</button>
+                            <Link to={`/products/${product.id}`} className='readMore'>Read more...</Link>
                         </div>
                 )
                 })
