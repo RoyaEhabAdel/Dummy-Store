@@ -65,13 +65,14 @@ header{
  .products .products-items img{
   width: 80%;
 }
- .products .products-items button{
+ .products .products-items .readMore{
   border: none;
   border-radius: 20px;
   background-color: rgb(3, 144, 144);
   color: white;
   padding: 10px;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .home-component .products-section .all-btn{
@@ -91,4 +92,40 @@ header{
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+
+.details{
+  background-color: rgb(245, 247, 247);
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  position: relative;
+}
+.details .category{
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px;
+}
+.details .price{
+  text-decoration: line-through;
+  color: rgb(230, 2, 2);
+}
+.details .dis{
+  color: rgb(1, 160, 1);
+}
+.details img{
+  width: 30%;
+}
+.details button{
+  position: absolute;
+  top: 90%;
+  left: 70%;
+  font-size: 16px;
+  padding: 6px;
+  border: none;
+  background-color: rgb(1, 82, 82);
+  color: white;
+  width: 20%;
+  cursor: pointer;
 }
