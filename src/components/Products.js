@@ -2,6 +2,7 @@ import React from 'react'
 import '../App.css'
 import Navbar from './Navbar';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const Products = () => {
 
@@ -45,7 +46,7 @@ const Products = () => {
                             <h3>{product.title}</h3>
                             <img alt='' src={product.images} />
                             <p>{product.description}</p>
-                            <button>Read more...</button>
+                            <Link to={`/products/${product.id}`} className='readMore'>Read more...</Link>
                         </div>
                 )
                 })
