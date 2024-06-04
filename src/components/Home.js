@@ -3,6 +3,7 @@ import '../App.css'
 import Navbar from './Navbar';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import SearchBar from './SearchBar';
 
 
 const Home = () => {
@@ -14,7 +15,7 @@ const Home = () => {
         try {
             const res = await fetch('https://dummyjson.com/products');
             const data = await res.json();
-            console.log(data)
+            
             setProducts(data.products)
         } catch (error) {
             console.log("The error is", error)
@@ -37,6 +38,8 @@ const Home = () => {
             <h5>Explore your beauty</h5>
         </div>
 
+        <SearchBar />
+        
         <div className='products-section'>
         <h2>Products</h2>
         
@@ -47,7 +50,7 @@ const Home = () => {
                     return(
                         <div className='products-items'> 
                             <h3>{product.title}</h3>
-                            <img alt='' src={product.images} />
+                            <img alt='' src={product.images[0]} />
                             <p>{product.description}</p>
                             <Link to={`/products/${product.id}`} className='readMore'>Read more...</Link>
                         </div>
